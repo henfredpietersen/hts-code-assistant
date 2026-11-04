@@ -1,0 +1,15 @@
+[project]
+name = "hts-code-assistant"
+version = "0.1.0"
+description = "Suggest US tariff (HTS) codes for a product description, cite the schedule, and say when it is not sure."
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 135
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

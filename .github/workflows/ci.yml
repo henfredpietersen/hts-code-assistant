@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history: a test checks the test set predates the synonym list
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest ruff
+      - run: ruff check .
+      - run: pytest -q
+      - name: Check the published page matches the code
+        run: |
+          python web/build.py
+          git diff --exit-code docs/demo.js
