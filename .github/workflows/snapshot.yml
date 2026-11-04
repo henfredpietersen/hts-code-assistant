@@ -1,0 +1,33 @@
+name: Build data snapshot
+
+# Downloads the current HTS from the USITC on GitHub's servers and rebuilds data/hts.json. Runs by hand, or when the builder changes. Commits only if the result changed.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/make_snapshot.py
+      - .github/workflows/snapshot.yml
+      - data/golden.json
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build
+        run: python scripts/make_snapshot.py
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/hts.json
+          if git diff --cached --quiet; then echo "Snapshot unchanged"; exit 0; fi
+          git commit -m "Rebuild HTS snapshot from the USITC"
+          git push
