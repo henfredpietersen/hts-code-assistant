@@ -45,6 +45,8 @@ def test_suggests_heading_and_best_line():
     r = schedule().suggest("Portable Bluetooth speaker")
     c = r["candidates"][0]
     assert c["heading"] == "8518" and c["line"]["code"] == "8518.21.00.00" and c["line"]["general"] == "4.9%"
+    tee = next(ln for ln in schedule().lines if ln["code"] == "6109.10.00.04")
+    assert tee["general"] == "16.5%"  # inherited from the 8-digit line above it
     assert r["sure"]
 
 

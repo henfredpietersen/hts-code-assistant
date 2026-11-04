@@ -94,7 +94,7 @@ class Schedule:
         self.heading_text: dict[str, str] = {}
         self.heading_docs: dict[str, list[str]] = defaultdict(list)
         self.lines: list[dict] = []  # 8/10-digit lines with their path inside the heading
-        stack: list[tuple[int, str]] = []
+        stack: list[tuple[int, str, str]] = []  # (indent, description, general rate)
         heading = None
         for code, indent, desc, general, units in rows:
             digits = code_digits(code)
@@ -106,13 +106,15 @@ class Schedule:
                 stack = []
             while stack and stack[-1][0] >= indent:
                 stack.pop()
-            path = [d for _, d in stack] + [desc]
-            stack.append((indent, desc))
+            path = [d for _, d, _ in stack] + [desc]
+            # 10-digit statistical lines carry no rate; the rate is on the 8-digit line above them
+            rate = general or next((g for _, _, g in reversed(stack) if g), "")
+            stack.append((indent, desc, general))
             if heading not in self.heading_text:
                 self.heading_text[heading] = desc
             self.heading_docs[heading].append(desc)
             if len(digits) >= 8:
-                self.lines.append({"code": code, "heading": heading, "path": path, "general": general, "units": units})
+                self.lines.append({"code": code, "heading": heading, "path": path, "general": rate, "units": units})
         # heading documents
         docs = {h: words(" ".join([self.heading_text[h]] * HEADING_WEIGHT + self.heading_docs[h])) for h in self.heading_text}
         self.idf = _idf(docs.values())

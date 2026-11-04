@@ -13,8 +13,8 @@
   var PYODIDE = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/";
   var REPO = "https://github.com/henfredpietersen/hts-code-assistant";
   var BASE = host.getAttribute("data-base") || "../";
-  var EXAMPLES = ["Portable Bluetooth speaker", "Men's cotton T-shirt, knitted", "Stainless steel water bottle",
-    "Wireless earbuds", "Electric scooter for adults", "A gift for my mum"];
+  var EXAMPLES = ["Portable Bluetooth speaker", "Men's cotton T-shirt, knitted", "Cordless electric drill",
+    "Smoke detector", "Petrol lawn mower", "A gift for my mum"];
   var root = host.attachShadow({ mode: "open" });
   var py = null;
 
