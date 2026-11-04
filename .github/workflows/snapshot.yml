@@ -8,7 +8,6 @@ on:
     paths:
       - scripts/make_snapshot.py
       - .github/workflows/snapshot.yml
-      - data/golden.json
 
 permissions:
   contents: write

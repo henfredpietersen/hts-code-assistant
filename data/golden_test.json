@@ -1,0 +1,169 @@
+{
+ "about": "A second set, written and committed before the synonym list in hts/synonyms.py, so it shows how the assistant does on products the synonyms weren't written for. Labelled the same way as golden_dev.json: by hand at heading level from the schedule's heading text, for common products whose heading isn't in doubt. Not customs rulings.",
+ "items": [
+  {
+   "product": "Electric toothbrush",
+   "heading": "8509"
+  },
+  {
+   "product": "Kitchen blender",
+   "heading": "8509"
+  },
+  {
+   "product": "Electric shaver",
+   "heading": "8510"
+  },
+  {
+   "product": "Wireless earbuds",
+   "heading": "8518"
+  },
+  {
+   "product": "Computer mouse",
+   "heading": "8471"
+  },
+  {
+   "product": "Desk lamp",
+   "heading": "9405"
+  },
+  {
+   "product": "Ceiling fan",
+   "heading": "8414"
+  },
+  {
+   "product": "Cotton bed sheets",
+   "heading": "6302"
+  },
+  {
+   "product": "Leather belt",
+   "heading": "4203"
+  },
+  {
+   "product": "Baseball cap",
+   "heading": "6505"
+  },
+  {
+   "product": "Women's cotton dress, woven",
+   "heading": "6204"
+  },
+  {
+   "product": "Cotton socks",
+   "heading": "6115"
+  },
+  {
+   "product": "Plastic food storage containers",
+   "heading": "3924"
+  },
+  {
+   "product": "Glass jars for packing food",
+   "heading": "7010"
+  },
+  {
+   "product": "Steel kitchen knives",
+   "heading": "8211"
+  },
+  {
+   "product": "Scissors",
+   "heading": "8213"
+  },
+  {
+   "product": "Padlocks",
+   "heading": "8301"
+  },
+  {
+   "product": "Plastic garden hose",
+   "heading": "3917"
+  },
+  {
+   "product": "Paint brushes",
+   "heading": "9603"
+  },
+  {
+   "product": "Ballpoint pens",
+   "heading": "9608"
+  },
+  {
+   "product": "Pencils",
+   "heading": "9609"
+  },
+  {
+   "product": "Paper notebooks",
+   "heading": "4820"
+  },
+  {
+   "product": "Dog food in cans",
+   "heading": "2309"
+  },
+  {
+   "product": "Frozen french fries",
+   "heading": "2004"
+  },
+  {
+   "product": "Orange juice",
+   "heading": "2009"
+  },
+  {
+   "product": "Bottled mineral water",
+   "heading": "2201"
+  },
+  {
+   "product": "Rice",
+   "heading": "1006"
+  },
+  {
+   "product": "Dry pasta",
+   "heading": "1902"
+  },
+  {
+   "product": "Ice cream",
+   "heading": "2105"
+  },
+  {
+   "product": "Cheddar cheese",
+   "heading": "0406"
+  },
+  {
+   "product": "Fresh salmon fillets",
+   "heading": "0304"
+  },
+  {
+   "product": "Dolls",
+   "heading": "9503"
+  },
+  {
+   "product": "Fishing rods",
+   "heading": "9507"
+  },
+  {
+   "product": "Skateboard",
+   "heading": "9506"
+  },
+  {
+   "product": "Cordless electric drill",
+   "heading": "8467"
+  },
+  {
+   "product": "Petrol lawn mower",
+   "heading": "8433"
+  },
+  {
+   "product": "Child car seat",
+   "heading": "9401"
+  },
+  {
+   "product": "Gold ring with diamonds",
+   "heading": "7113"
+  },
+  {
+   "product": "Disposable baby diapers",
+   "heading": "9619"
+  },
+  {
+   "product": "Bathroom weighing scale",
+   "heading": "8423"
+  },
+  {
+   "product": "Smoke detector",
+   "heading": "8531"
+  }
+ ]
+}
